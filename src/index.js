@@ -63,8 +63,9 @@ function createCountryMarkup(country) {
     </ul>
     `;
 }
-function notifyError() {
+function notifyError(e) {
   Notify.failure('Oops, there is no country with that name');
+  console.log(e);
 }
 function notifyTooManyMatches() {
   Notify.info('Too many matches found. Please enter a more specific name.');
