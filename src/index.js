@@ -47,13 +47,13 @@ function createCountriesMarkup(countryArr) {
     .join('');
 }
 function createCountryMarkup(country) {
-  const lang = [];
+  const lang = ['!'];
   const languages = { ...country.languages };
   for (key in languages) {
     lang.push(languages[key]);
   }
-  console.log(lang);
-  return `
+
+  const markup = `
     <ul>
     <li><img src='${country.flags.svg}' width='30' height='30'><h2>${country.name.official}</h2></li>
     <li>Capital: <span>${country.capital}</span></li>
@@ -62,6 +62,7 @@ function createCountryMarkup(country) {
     <li>Languages: ${lang}</li>
     </ul>
     `;
+  return markup;
 }
 function notifyError(e) {
   Notify.failure('Oops, there is no country with that name');
