@@ -47,11 +47,11 @@ function createCountriesMarkup(countryArr) {
     .join('');
 }
 function createCountryMarkup(country) {
-  const lang = [];
-  for (key in country.languages) {
-    lang.push(country.languages[key]);
-  }
-  console.log(lang);
+  // const lang = [];
+  // for (key in country.languages) {
+  //   lang.push(country.languages[key]);
+  // }
+  // console.log(lang);
   return `
     <ul>
     <li><img src='${country.flags.svg}' width='30' height='30'><h2>${
@@ -60,6 +60,7 @@ function createCountryMarkup(country) {
     <li>Capital: <span>${country.capital}</span></li>
     <li>Population: ${country.population}</li>
     <li>Languages: ${lang.join(', ')}</li>
+    <li>Languages: ${country.languages}</li>
     </ul>
     `;
 }
