@@ -47,7 +47,7 @@ function createCountriesMarkup(countryArr) {
     .join('');
 }
 function createCountryMarkup(country) {
-  const lang = [' '];
+  const lang = [];
   const languages = { ...country.languages };
   for (let key in languages) {
     lang.push(languages[key]);
